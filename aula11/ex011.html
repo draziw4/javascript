@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Nacionalidade</title>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    Qual seu país ? <p><input type="text" name="pais" id="pais" placeholder="Digita seu País"></p>
+    <input type="button" value="verificar" onclick="teste()">
+    <div id="resultado">
+
+    </div>
+
+    <script>
+        function teste(){
+            var país = document.getElementById('pais')
+            var res = document.getElementById('resultado')
+            
+
+            if(país.value == 'Estados Unidos'){
+                res.innerHTML = (`Você é bem vindo`)
+            }else{
+                res.innerHTML = (`Seu país é: ${país.value}. <p>Você não é bem vindo!</p>`)
+            }
+            
+
+        }
+    </script>
+
+
+    
+</body>
+</html>

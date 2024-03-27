@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: grey;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <script>
+      var ano = Number(window.prompt("Qual ano você nasceu ?"))
+      var nome = (window.prompt("Qual seu nome ?"))
+      var salario = Number((window.prompt("Qual seu salário atual na empresa?")))
+      var anoatual = 2024
+      var idade = Number(anoatual) - ano  
+
+     
+
+      
+      document.write(`Oi, ${nome} Sua idade é: ${idade} </br>`)
+      document.write(`O seu salário atual é: ${salario.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})
+      }`)
+      
+
+
+    
+
+      
+
+    
+
+    </script>
+    
+</body>
+</html>

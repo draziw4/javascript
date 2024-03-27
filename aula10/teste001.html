@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Valores</title>
+    <style>
+        body{
+            background-color: rgb(17, 17, 192);
+            color: white;
+            font-variant: small-caps;
+
+        }
+        div{
+            margin-top: 20px;
+            font-variant: small-caps;
+        }
+        div#segredo{
+            width: 250px;
+            height: 200px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Nome completo</h1>
+    <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+    <input type="text" name="sobrenome" id="sobrenome" placeholder= "Digite seu sobrenome">
+    <input type="button" value="Enviar" onclick="enviar()">
+    
+    <div id="msg">
+        Nome Completo: 
+    </div>
+
+    <div id="segredo">
+        <input type="button" value="Desbloqueie" onclick="mudar()">
+    </div>
+   
+    <script>
+       
+       
+
+        function enviar(){
+           
+            var nome1 = window.document.getElementById("nome")
+            var sobrenome2 = window.document.getElementById("sobrenome")
+            var msg = window.document.getElementById("msg")
+            var nome = String(nome1.value)
+            var sobrenome = String(sobrenome2.value)
+            var back = window.document.getElementsByTagName('body')
+
+            var nomecompleto = nome + sobrenome
+            
+            
+
+            msg.innerHTML = `Seu nome completo é: ${nome} ${sobrenome}`
+
+        }
+        function mudar(){
+            var nivel = window.document.getElementById('segredo')
+            nivel.innerText = 'Você passou para um novo nível!'
+            nivel.style.background = 'black'
+        }
+
+    </script>
+
+    
+</body>
+</html>
